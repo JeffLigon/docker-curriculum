@@ -18,7 +18,7 @@ images = [
     "https://firebasestorage.googleapis.com/v0/b/docker-curriculum.appspot.com/o/catnip%2F9.gif?alt=media&token=a57a1c71-a8af-4170-8fee-bfe11809f0b3",
 ]
 
-@app.route('/')
+@app.route('/cats')
 def index():
     url = random.choice(images)
     return render_template('index.html', url=url)
